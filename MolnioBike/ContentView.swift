@@ -12,23 +12,24 @@ struct ContentView: View {
         ZStack {
             Color("bgcolor")
                 .edgesIgnoringSafeArea(.all)
-            HStack (alignment: .center) {
-                Text("Choose Your Bike")
-                    .foregroundColor(.white)
-                    .font(.system(size: 24))
-                    .fontWeight(.bold)
-                Spacer()
-                Button(action: {
-                    //
-                }) {
-                    Image("search")
-                        .frame(width: 44,height: 44)
-                        .background(LinearGradient(gradient: Gradient(colors: [Color("color1"), Color("color2")]), startPoint: .leading, endPoint: .bottomTrailing))
+            VStack {
+                HStack (alignment: .center) {
+                    Text("Choose Your Bike")
                         .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-            }.frame(maxWidth: 350, maxHeight: 44)
-           
+                        .font(.system(size: 24))
+                        .fontWeight(.bold)
+                    Spacer()
+                    Button(action: {
+                        //
+                    }) {
+                        Image("search")
+                            .frame(width: 44,height: 44)
+                            .background(LinearGradient(gradient: Gradient(colors: [Color("color1"), Color("color2")]), startPoint: .leading, endPoint: .bottomTrailing))
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
+                }.frame(maxWidth: 350, maxHeight: 44)
+            }
         }
     }
 }
